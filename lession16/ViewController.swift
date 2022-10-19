@@ -14,6 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var rocketIdName: UILabel!
     @IBOutlet weak var rocketIdOffice: UILabel!
     
+    @IBOutlet weak var rockectIdButtonOutlet: UIButton!
+    
+    @IBAction func rocketIdButton(_ sender: Any) {
+
+        setupLayout()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,7 +32,7 @@ class ViewController: UIViewController {
     func setupLayout() {
         let addIdImage = UIImage(named: "downloadcirle")
         
-        var arrayOfPeople: [(name: String, office: String)] = [("Pedro", "Estagiario"), ("Otavio", "Estagiario"), ("Renan", "Estagiario"), ("Aline", "Estagiaria"), ("Raul", "Estagiario"), ("Bruna", "Estagiaria"), ("Vinicius", "Estagiario"), ("Émerson", "Estagiario"), ("Yuri", "Estagiario"), ("Livia", "Estagiaria"), ("Lucas", "Instrutor"), ("Julia"," Instrutora")]
+        let arrayOfPeople: [(name: String, office: String)] = [("Pedro", "Estagiario"), ("Otavio", "Estagiario"), ("Renan", "Estagiario"), ("Aline", "Estagiaria"), ("Raul", "Estagiario"), ("Bruna", "Estagiaria"), ("Vinicius", "Estagiario"), ("Émerson", "Estagiario"), ("Yuri", "Estagiario"), ("Livia", "Estagiaria"), ("Lucas", "Instrutor"), ("Julia"," Instrutora")]
         
         let index = Int.random(in: 0...11)
                 
@@ -35,10 +43,12 @@ class ViewController: UIViewController {
         rocketIdImage.image = addIdImage
         rocketIdName.text = arrayOfPeople[index].name
         rocketIdOffice.text = arrayOfPeople[index].office
+        
         if arrayOfPeople[index].name == "Pedro" {
             let addMyIdImage = UIImage (named: "eu-modified")
             rocketIdImage.image = addMyIdImage
         }
+        
     }
 }
 

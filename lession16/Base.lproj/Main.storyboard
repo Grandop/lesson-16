@@ -40,11 +40,25 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpl-U6-cI2">
+                                <rect key="frame" x="120" y="695" width="134" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.50196078431372548" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="RANDOMIZAR" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.50196078431372548" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rocketIdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AR9-z2-TFg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.67843137254901964" green="0.65490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="rockectIdButtonOutlet" destination="fpl-U6-cI2" id="upg-s7-Bcg"/>
                         <outlet property="rocketIdImage" destination="Q7w-0H-1Me" id="l36-qb-r4G"/>
                         <outlet property="rocketIdName" destination="hKq-2M-p7j" id="pPV-4k-4sN"/>
                         <outlet property="rocketIdOffice" destination="00K-w5-rf8" id="n7U-3f-a0v"/>
@@ -53,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="-172"/>
+            <point key="canvasLocation" x="-146.40000000000001" y="-172.16748768472908"/>
         </scene>
     </scenes>
     <resources>
