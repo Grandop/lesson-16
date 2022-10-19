@@ -20,18 +20,25 @@ class ViewController: UIViewController {
         
         setupLayout()
     }
-
+    
     func setupLayout() {
-        rocketIdTitle.text = "Programa rocket"
-        rocketIdTitle.textColor = UIColor.white
-        
-        
         let addIdImage = UIImage(named: "downloadcirle")
         
-        rocketIdImage.image = addIdImage
+        var arrayOfPeople: [(name: String, office: String)] = [("Pedro", "Estagiario"), ("Otavio", "Estagiario"), ("Renan", "Estagiario"), ("Aline", "Estagiaria"), ("Raul", "Estagiario"), ("Bruna", "Estagiaria"), ("Vinicius", "Estagiario"), ("Émerson", "Estagiario"), ("Yuri", "Estagiario"), ("Livia", "Estagiaria"), ("Lucas", "Instrutor"), ("Julia"," Instrutora")]
         
-        rocketIdName.text = "Pedro Grando"
-        rocketIdOffice.text = "Estagiario"
+        let index = Int.random(in: 0...11)
+                
+        rocketIdTitle.text = "Programa rocket"
+        rocketIdTitle.textColor = UIColor.white
+                
+        
+        rocketIdImage.image = addIdImage
+        rocketIdName.text = arrayOfPeople[index].name
+        rocketIdOffice.text = arrayOfPeople[index].office
+        if arrayOfPeople[index].name == "Pedro" {
+            let addMyIdImage = UIImage (named: "eu-modified")
+            rocketIdImage.image = addMyIdImage
+        }
     }
 }
 
